@@ -1,10 +1,15 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 
-const person = () => {
-   
+const person = (props) => {
+
+  
  return( 
-     <div>
-         <p>焼肉食べたい</p>
+     <div className="card">
+         <p>{props.desire}、{props.hosisa}食べたい</p>
+         <p>{props.children}</p>
+         <input type="text" onChange={props.changed} value={props.desire}/>
+        
      </div>
  );
 };
